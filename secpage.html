@@ -1,0 +1,107 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+<link rel="canonical" href="https://codepen.io/robertkoons/pen/NByBMg">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+  <title>CodePen - PDF Upload And Display</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
+  
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="container ">
+	<div class="row my-3 d-flex justify-content-center">
+		<div class="col-lg-10">
+			<h1 class="text-center">PDF Preview</h1>
+			<h1 class="text-center" id="jobposition"></h1>
+		</div>
+	</div>
+	<div class="row my-3 d-flex justify-content-center">
+		<div class="col-lg-10 text-center">
+			<button id="upload-button">Select PDF</button> 
+			<input class="d-none" type="file" id="file-to-upload" accept="application/pdf" />		
+		</div>
+	</div>
+	</div>
+	<div class="row my-3 d-flex justify-content-center">
+		<div class="col-lg-10 text-center">
+			<div id="pdf-main-container">
+				<div id="pdf-loader">Waiting for upload ...</div>
+				<div id="pdf-contents">
+						<div id="pdf-meta">
+								<div id="pdf-buttons">
+										<button id="pdf-prev">Previous</button>
+										<button id="pdf-next">Next</button>
+								</div>
+								<div id="page-count-container">Page <span id="pdf-current-page"></span> of <span id="pdf-total-pages"></span></div>
+						</div>
+						<canvas id="pdf-canvas" style="width:50%" width="1000px"></canvas>
+						<div id="page-loader">Loading page ...</div>
+				</div>
+		</div>
+		</div>
+	</div>
+	<div class="head">Your Skills</div>
+	<div id="skilltable" ></div>
+
+
+	<div class="head">Your Matches</div>
+	<div id="skilltable2" ></div>
+	
+	<div class="progress-circle-container"  id="addpercentahe" style="width: 10vw;margin: auto;margin-top: 140px; transform: scale(3);">
+	</div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js"></script>
+	<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-d8236034cc3508e70b0763f2575a8bb5850f9aea541206ce56704c013047d712.js"></script>
+	<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+	<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.385/build/pdf.min.js'></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.385/build/pdf.worker.js'></script>
+<script src="https://unpkg.com/localbase/dist/localbase.dev.js"></script>
+<script src="https://npmcdn.com/pdfjs-dist/build/pdf.js"></script>
+<script>
+</script>
+<script src="pdfcheck.js" ></script>
+<script src="skills.js" ></script>
+<script src="addset.js" ></script>
+</body>
+
+</html>
+
