@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="addradio">
+        <div class="head">Choose job description</div>
+        <div  class="skillspace" id="radiospace" style="background-color: darksalmon;">
+            <label class="container">One
+                <input type="radio" checked="checked" name="radio"  onclick="if(this.checked){addframe()}">
+                <span class="checkmark"></span>
+            </label><hr>
+            <label class="container">Two
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+                
+            </label><hr>
+            
+            <label class="container">Three
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label><hr>
+            <label class="container">Four
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+              
+        </div>
+        <div id="yourchoose2" >        
+            Choose a skill
+        </div>  
+        <div class="skillbutton" >
+            <a class="linkbutton"  href="index.html">Submit</a>
+        </div>
+    </div>
+    <div class="skillbutton" >
+        <a class="linkbutton" id="addremove" style="background-color: crimson;"  href="#" onclick="showtoogle()" >Add skillset</a>
+    </div>
+    <div id="addcontainer" style="display: none;">
+        <div class="head">Select Skills</div>
+        
+        <div id="yourchoose">
+            <div id="submitname">
+                <input type="text" id="jobname" name="job" placeholder="Enter your job description"><br><br>
+            </div>
+            <div id="submitsklills">        
+                <section class="theskill" onclick="removethis(0,0)"  >Javascript  ❌</section>
+                <section class="theskill"  onclick="removethis(0,0)" >Python ❌</section>
+                <section class="theskill" onclick="removethis(0,0)"  >Javascript ❌</section>
+                <section class="theskill"  onclick="removethis(0,0)" >Python ❌</section>
+                <section class="theskill" onclick="removethis(0,0)"  >Javascript ❌</section>
+                <section class="theskill"  onclick="removethis(0,0)" >Python ❌</section>
+                <section class="theskill" onclick="removethis(0,0)"  >Javascript ❌</section>
+                <section class="theskill"  onclick="removethis(0,0)" >Python ❌</section>
+                <section class="theskill" onclick="removethis(0,0)"  >Javascript ❌</section>
+                <section class="theskill"  onclick="removethis(0,0)" >Python ❌</section>
+                <section class="theskill" onclick="removethis(0,0)"  >Javascript ❌</section>
+                <section class="theskill"  onclick="removethis(0,0)" >Python ❌</section>
+                <section class="theskill" onclick="removethis(0,0)"  >Javascript ❌</section>
+                <section class="theskill"  onclick="removethis(0,0)" >Python ❌</section>
+                <section class="theskill" onclick="removethis(0,0)"  >Javascript ❌</section>
+                <section class="theskill"  onclick="removethis(0,0)" >Python ❌</section>
+            </div>  
+        <div class="skillbutton" >
+            <a class="linkbutton"  href="#" onclick="addnewskillset()" >Submit</a>
+        </div>
+        </div>
+
+        <div class="head">programming</div>
+        <div id="programming" class="skillspace">
+            <section class="selectskill" onclick="addthis(0,0)"  >Javascript ➕</section>
+            <section class="selectskill"  onclick="removethis(0,0)" >Python ➕</section>
+            <section class="selectskill" onclick="removethis(0,0)"  >Javascript ➕</section>
+            <section class="selectskill"  onclick="removethis(0,0)" >Python ➕</section>
+            <section class="selectskill" onclick="removethis(0,0)"  >Javascript ➕</section>
+            <section class="selectskill"  onclick="removethis(0,0)" >Python ➕</section>
+        </div>
+
+        <div class="head">markdown</div>
+        <div id="markdown" class="skillspace">
+            <section class="selectskill" onclick="removethis(0,0)"  >Javascript ➕</section>
+            <section class="selectskill"  onclick="removethis(0,0)" >Python ➕</section>
+            <section class="selectskill" onclick="removethis(0,0)"  >Javascript ➕</section>
+            <section class="selectskill"  onclick="removethis(0,0)" >Python ➕</section>
+            <section class="selectskill" onclick="removethis(0,0)"  >Javascript ➕</section>
+            <section class="selectskill"  onclick="removethis(0,0)" >Python ➕</section>
+        </div>
+
+        <div class="head">technicalskills</div>
+        <div id="technicalskills" class="skillspace">
+
+        </div>
+
+        <div class="head">frameworks</div>
+        <div id="frameworks" class="skillspace">
+
+        </div>
+
+        <div class="head">databases</div>
+        <div id="databases" class="skillspace">
+
+        </div>
+
+        <div class="head">hosting</div>
+        <div id="hosting" class="skillspace">
+        
+        </div>
+    </div>
+    <script src="https://unpkg.com/localbase/dist/localbase.dev.js"></script>
+    <script src="pdfcheck.js" ></script>
+    <script src="skills.js" ></script>
+<script src="addset.js" ></script>
+
+</body>
+</html>
